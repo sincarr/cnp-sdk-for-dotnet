@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>12.7.3</Version>
+    <Version>12.7.4</Version>
     <Company>Worldpay</Company>
-    <Copyright>Copyright © Worldpay 2018</Copyright>
+    <Copyright>Copyright © Worldpay 2019</Copyright>
     <Authors />
   </PropertyGroup>
 
