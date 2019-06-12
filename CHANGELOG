@@ -1,6 +1,9 @@
 
 = Worldpay CNP CHANGELOG
 
+==Version 12.7.4 (June 11, 2019)
+* BugFix: Changing the checkoutIdType field to checkoutId field to align with our eProtect Solution
+
 ==Version 12.7.3(Jan. 14, 2019)
 * Change: Moved from .NET Framework to .NET Core 2.2
 * Change: Switched from NUnit testing framework to Xunit
