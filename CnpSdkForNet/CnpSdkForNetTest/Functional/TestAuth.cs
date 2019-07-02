@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
-using System.Threading;
 
 namespace Cnp.Sdk.Test.Functional
 {
@@ -633,33 +632,8 @@ namespace Cnp.Sdk.Test.Functional
 
             authorization.lodgingInfo.lodgingCharges.Add(new lodgingCharge() { name = lodgingExtraChargeEnum.GIFTSHOP});
             var response = _cnp.Authorize(authorization);
-            Assert.AreEqual("Approved", response.message);
+            Assert.AreEqual("000", response.response);
 
-        }
-
-        [Test]
-        public void TestAuthAsync()
-        {
-            var authorization = new authorization
-            {
-                id = "1",
-                reportGroup = "Planets",
-                orderId = "12344",
-                amount = 106,
-                orderSource = orderSourceType.ecommerce,
-                card = new cardType
-                {
-                    type = methodOfPaymentTypeEnum.VI,
-                    number = "414100000000000000",
-                    expDate = "1210"
-                },
-                customBilling = new customBilling { phone = "1112223333" }
-            };
-
-            CancellationToken cancellationToken = new CancellationToken(false);
-            var response = _cnp.AuthorizeAsync(authorization, cancellationToken);
-
-            Assert.AreEqual("000", response.Result.response);
         }
 
     }
