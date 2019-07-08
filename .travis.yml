@@ -6,7 +6,7 @@ notifications:
 dotnet: 2.1
 install:
   - nuget restore CnpSdkForNet/CnpSdkForNet.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Release CnpSdkForNet/CnpSdkForNet.sln
   - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe  CnpSdkForNetTest/bin/Debug/CnpSdkForNetTest.exe
